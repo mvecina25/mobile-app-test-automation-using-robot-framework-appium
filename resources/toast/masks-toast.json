@@ -1,0 +1,16 @@
+[
+    {
+    "page": "1",
+    "name": "Top Border",
+    "type": "area",
+    "location": "top",
+    "percent":  80
+    },
+    {
+    "page": "1",
+    "name": "Bottom Border",
+    "type": "area",
+    "location": "bottom",
+    "percent":  5
+    }
+]

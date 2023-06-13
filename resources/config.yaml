@@ -1,0 +1,18 @@
+##### Environments
+DEV_ENV: http://localhost:4723/wd/hub
+QA_ENV: http://localhost:4723/wd/hub
+PROD_ENV: http://localhost:4723/wd/hub
+
+##### Android Desired Capabilities
+ANDROID_PLATFORM: android
+ANDROID_DEVICE_NAME: emulator-5554
+ANDROID_AUTOMATION_NAME: UiAutomator2
+ANDROID_APP_PACKAGE: com.lambdatest.proverbial
+ANDROID_APP_ACTIVITY: com.lambdatest.proverbial.MainActivity
+
+##### iOS Desired Capabilities
+IOS_PLATFORM_NAME: ios
+IOS_DEVICE_NAME: iPhone 14 Pro Max
+IOS_AUTOMATION_NAME: XCUITest
+IOS_APP: com.lambdatest.proverbial
+IOS_OS_VERSION: '16.4'
