@@ -18,4 +18,4 @@ This folder contains utility scripts and functions that may be used by the tests
 
     # How To Run
     cd ../tests
-    robot -d ../reports tests.robot
+    robot -v ENV:QA -v PLATFORMNAME:android -d ../reports tests.robot
