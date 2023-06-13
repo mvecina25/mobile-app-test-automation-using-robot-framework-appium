@@ -19,3 +19,6 @@ This folder contains utility scripts and functions that may be used by the tests
     # How To Run
     cd ../tests
     robot -v ENV:QA -v PLATFORMNAME:android -d ../reports tests.robot
+
+
+https://github.com/mvecina25/mobile-app-test-automation-using-robot-framework-appium/assets/32367570/c7ce27a5-56cf-4d2b-8403-7bf1bd23f5ce
