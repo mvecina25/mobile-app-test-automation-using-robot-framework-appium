@@ -1,5 +1,5 @@
 ## Folder Structure
-#### pages/:
+#### pages_objects/:
 This folder contains the elements of each page and functions which perform operations on those elements.
 #### reports/:
 This folder contains the output reports of test runs including logs, screenshots, and metrics.
@@ -22,3 +22,17 @@ This folder contains utility scripts and functions that may be used by the tests
 
 
 https://github.com/mvecina25/mobile-app-test-automation-using-robot-framework-appium/assets/32367570/c7ce27a5-56cf-4d2b-8403-7bf1bd23f5ce
+
+Scenarios:
+1. On the home screen, I clicked on "COLOR" and verified that there was a change in color.
+2. On the home screen, I clicked on "NOTIFICATION" and confirmed that a notification was received on the device.
+3. On the home screen, I clicked on "TEXT" and captured the displayed text on the home screen.
+4. On the home screen, I clicked on "TOAST" and verified the observation of a pop-up message.
+5. On the home screen, I clicked on "SPEED TEST" and navigated to the speed testing screen. I captured the upload/download speed recorded and successfully returned to the home screen after completing the speed test.
+
+Other information:
+1. Incorporated both positive and negative test cases.
+2. Included a README file.
+3. The test framework is designed to run in multiple environments such as DEV, QA, and PROD
+4. The test framework effectively handles sensitive information by externalizing data using .YAML
+5. The test framework is designed with minimal code redundancy.
