@@ -13,12 +13,15 @@ This folder contains utility scripts and functions that may be used by the tests
 ## How To Run
 * Terminal
     ```
-    # Install packages
-    pip3 install -r requirements.txt
+    ### Install packages
+    1. pip3 install -r requirements.txt
+    2. Install Android Studio
+    3. Use Pixel 6 API 34 Emulator
+    4. Launch AVD
 
-    # How To Run
-    cd ../tests
-    robot -v ENV:QA -v PLATFORMNAME:android -d ../reports tests.robot
+    ### How To Run
+    1. cd ../tests
+    2. robot -v ENV:QA -v PLATFORMNAME:android -d ../reports tests.robot
 
 
 https://github.com/mvecina25/mobile-app-test-automation-using-robot-framework-appium/assets/32367570/c7ce27a5-56cf-4d2b-8403-7bf1bd23f5ce
