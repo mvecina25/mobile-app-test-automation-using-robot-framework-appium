@@ -14,5 +14,5 @@ Click Color Button
     AppiumLibrary.Click Element    ${color_elements.color_button}
 
 Verify Color Change
-    AppiumLibrary.Capture Page Screenshot    ../resources/color/actual-color.png 
-    Compare Images    ../resources/color/expected-color.png    ../resources/color/actual-color.png    ../resources/color/masks-color.json
+    AppiumLibrary.Capture Page Screenshot    ${CURDIR}/../resources/color/actual-color.png 
+    Compare Images    ${CURDIR}/../resources/color/expected-color.png    ${CURDIR}/../resources/color/actual-color.png    ${CURDIR}/../resources/color/masks-color.json

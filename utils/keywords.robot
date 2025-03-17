@@ -1,8 +1,9 @@
 *** Settings ***
 Library    OperatingSystem
 Library    AppiumLibrary
+Library    emulator.py
 
-Variables   ../resources/config.yaml
+Variables   ${CURDIR}/../resources/config.yaml
 
 *** Variables ***
 ${PLATFORMNAME}    ${EMPTY}
@@ -14,7 +15,7 @@ Get Simulator UDID
     Set Global Variable    ${DEVICE_UDID}    ${udid}
 
 Open Proverbial App
-    
+    Sleep    20s
     IF    '${PLATFORMNAME}' == 'android'
         Open Android Application
     ELSE IF    '${PLATFORMNAME}' == 'ios'
@@ -41,5 +42,19 @@ Open iOS Application
     ...    udid=${DEVICE_UDID}                          #Unique device identifier of the connected device
     ...    platformVersion=${IOS_OS_VERSION}            #Mobile OS version
 
+Launch Emulator
+    Start Emulator    Pixel_6_API_34
+    Sleep    10s    Wait for emulator to initialize
 
+Exit Emulator
+    Stop Emulator
+    Sleep    5s    Wait for emulator to stop
 
+Launch Appium
+    ${appium_process}=    Start Appium Server
+    Set Test Variable    ${appium_process}
+    Sleep    5s    Wait for Appium to initialize
+
+Exit Appium
+    Stop Appium Server    ${appium_process}
+    Sleep    5s    Wait for Appium to stop

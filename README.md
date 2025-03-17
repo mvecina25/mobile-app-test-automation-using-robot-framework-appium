@@ -10,18 +10,47 @@ This folder contains the actual test cases.
 #### utils/:
 This folder contains utility scripts and functions that may be used by the tests.
 
+## Setup
+* Setup Android Virtual Device
+    ```
+    1. Download and install Android Studio.
+    2. Create AVD using Android Studio
+
+* Setup Environment Variable
+   ```
+    export ANDROID_HOME=$HOME/Library/Android/sdk
+    export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
+
+* List Available AVDs
+   ```
+   emulator -list-avds
+
+* Start the Emulator and check if it's working
+   ```
+   emulator -avd <AVD_NAME>
+
+* Setup Appium Server
+  ```
+    1. Download and install Appium Desktop here: https://github.com/appium/appium-desktop
+
+* Install packages
+   ```
+    1. pip3 install -r requirements.txt
+
+* Add a .vscode/settings.json file in your project directory
+   ```
+    {
+        "robot.pythonpath": [
+            "${workspaceFolder}/venv/bin/python3.11",
+            "${workspaceFolder}/venv/lib/python3.11/site-packages"
+        ],
+        "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python3.11"
+    }
+
 ## How To Run
 * Terminal
     ```
-    ### Install packages
-    1. pip3 install -r requirements.txt
-    2. Install Android Studio
-    3. Use Pixel 6 API 34 Emulator
-    4. Launch AVD
-
-    ### How To Run
-    1. cd ../tests
-    2. robot -v ENV:QA -v PLATFORMNAME:android -d ../reports tests.robot
+    1. robot -v ENV:QA -v PLATFORMNAME:android -d ../reports tests/tests.robot
 
 
 https://github.com/mvecina25/mobile-app-test-automation-using-robot-framework-appium/assets/32367570/c7ce27a5-56cf-4d2b-8403-7bf1bd23f5ce

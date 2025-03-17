@@ -26,7 +26,7 @@ Capture Speed Test
         Log To Console    Speed Test is still on going. Status:${present}
         Sleep    5
         IF    '${present}' == 'False'    CONTINUE
-        AppiumLibrary.Capture Page Screenshot    ../resources/speed/speedtest.png
+        AppiumLibrary.Capture Page Screenshot    ${CURDIR}/../resources/speed/speedtest.png
         AppiumLibrary.Click Element    ${speed_elements.home_button}
         Exit For Loop
     END

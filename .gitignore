@@ -3,3 +3,7 @@
 
 # Reports
 /reports/*
+
+# Virtual Environment
+venv/*
+.vscode/*

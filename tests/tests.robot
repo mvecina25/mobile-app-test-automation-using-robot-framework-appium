@@ -9,10 +9,15 @@ Resource    ../page_objects/toast_po.robot
 Resource    ../page_objects/speed_po.robot
 Resource    ../page_objects/home_po.robot
 
-Test Setup  Run Keywords  Open Proverbial App
-Test Teardown  Close Application
+Test Setup  Run Keywords  Launch Emulator
+...    Launch Appium
+...    Open Proverbial App
+Test Teardown  Run Keywords  Close Application
+...    Exit Emulator
+...    Exit Appium
 
 *** Test Cases ***
+
 Positive: Click Color Button And Verify Color Change
     Click Color Button
     Verify Color Change
